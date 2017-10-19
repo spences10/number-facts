@@ -2,5 +2,8 @@
 
 Vanilla JavaScript application using fetch API to display random number facts numbers entered.
 
-Uses Bootstrap 4
+* Uses Bootstrap 4
+* Fetch API
+* Numbers API endpoint
+
 
