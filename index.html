@@ -45,6 +45,23 @@
       </div>
     </div>
   </div>
+  <script>
+    // create variable for the fact
+    const fact = document.querySelector('#fact')
+    const factText = document.querySelector('#factText')
+
+    const numberInput = document.querySelector('#numberInput')
+    // add event listenetr
+    numberInput.addEventListener('input', getFactFetch)
+
+    function getFactFetch() {
+      // set variable to the number entered
+      const number = numberInput.value
+      // test it logs out
+      console.log(number)
+    }
+
+  </script>
 </body>
 
 </html>
