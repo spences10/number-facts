@@ -22,11 +22,11 @@
     <div class="row">
       <!-- nice formatting -->
       <div class="col-md-6 mx-auto">
-        <!-- bg primary for card class -->
+        <!-- background info for card class -->
         <!-- text white  -->
         <!-- magin of 5 with mt-5 -->
         <!-- add padding of 4 with p-4 -->
-        <div class="card bg-primary text-white mt-5 p-4">
+        <div class="card bg-info text-white mt-5 p-4">
           <h1>Number Facts</h1>
           <p>Enter a number and get a random fact.</p>
           <!-- add id so JavaScript can use it -->
@@ -58,7 +58,22 @@
       // set variable to the number entered
       const number = numberInput.value
       // test it logs out
-      console.log(number)
+      // console.log(number)
+
+      // fetch endpoint, so in this case http://numbersapi.com/
+      fetch(`http://numbersapi.com/${number}`)
+        // promise comes back
+        .then(response => response.text())
+        .then(data => {
+          // test data comes back
+          // console.log(data)
+          // check that input number is not equal to nothing
+          if (number != '') {
+            fact.style.display = 'block'
+            factText.innerText = data
+          }
+        })
+        .catch(err => console.log(err))
     }
 
   </script>
