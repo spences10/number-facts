@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
     crossorigin="anonymous">
   <title>Number Trivia</title>
+  <!-- add styling to hide the fact div -->
+  <style>
+    #fact {
+      display: none;
+    }
+  </style>
 </head>
 
 <body class="bg-dark">
@@ -23,7 +29,18 @@
         <div class="card bg-primary text-white mt-5 p-4">
           <h1>Number Facts</h1>
           <p>Enter a number and get a random fact.</p>
-          <input type="number" class="form-control form-control-lg">
+          <!-- add id so JavaScript can use it -->
+          <!-- add placecolder of enter any number -->
+          <input type="number" class="form-control form-control-lg" id=numberInput placeholder="Enter a number...">
+          <!-- hidden div to show the result once returned by fetch -->
+          <div id="fact" class="card-body">
+            <h4 class="card-title">
+              Number Fact
+            </h4>
+            <p id="factText" class="card-text">
+
+            </p>
+          </div>
         </div>
       </div>
     </div>
